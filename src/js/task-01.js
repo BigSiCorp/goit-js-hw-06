@@ -1,20 +1,9 @@
-const numberOfCategories = document.querySelector('ul#categories').children.length;
-console.log(numberOfCategories)
+const listItems = document.querySelectorAll('.item')
 
-const firstListCategory = document.querySelector('ul#categories').firstElementChild.firstElementChild.textContent
-console.log(firstListCategory)
+const numberOfCategories = listItems.length;
+console.log('Number Of Categories:', numberOfCategories)
 
-const firstListNumberOfEl = document.querySelector('ul#categories').firstElementChild.querySelectorAll('.item li').length
-console.log(firstListNumberOfEl)
-
-const secondListCategory = document.querySelector('ul#categories').children[1].firstElementChild.textContent
-console.log(secondListCategory)
-
-const secondListNumberOfEl = document.querySelector('ul#categories').children[1].querySelectorAll('.item li').length
-console.log(secondListNumberOfEl)
-
-const thirdListCategory = document.querySelector('ul#categories').lastElementChild.firstElementChild.textContent
-console.log(thirdListCategory)
-
-const thirdListNumberOfEl = document.querySelector('ul#categories').lastElementChild.querySelectorAll('.item li').length
-console.log(thirdListNumberOfEl)
+for (const item of listItems) {
+    console.log('Category:',item.querySelector('h2').textContent);
+    console.log('Elements:',item.querySelectorAll('li').length);
+}

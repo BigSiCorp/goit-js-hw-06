@@ -2,12 +2,13 @@ const generateColor = document.querySelector(".change-color")
 const body = document.body
 const span = document.querySelector(".color")
 
-generateColor.addEventListener('click', getRandomHexColor)
+
 generateColor.addEventListener('click', changeColor)
 
 function changeColor() {
-  body.style.backgroundColor = getRandomHexColor();
-  span.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor(); 
+  span.textContent = randomColor;
+  body.style.backgroundColor = randomColor;
 }
 
 function getRandomHexColor() {

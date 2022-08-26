@@ -4,22 +4,19 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
     event.preventDefault();
-
-    const mail = event.currentTarget.elements.email.value;
-    const password = event.currentTarget.elements.password.value;
+    const { email, password } = event.currentTarget.elements;
+    const mailValue = email.value;
+    const passwordValue = password.value;
     const formData = {
-        mail,
-        password,
+        mailValue,
+        passwordValue,
     };
 
-    if (mail === '') {
-        alert('Fill the row with email, please');
-    } else if (password === '') {
-        alert('Enter your password, please');
-    } else {
+    if (mailValue === '' || passwordValue === '') {
+        alert('Please, fill the row(s)');
+    } 
         console.log(formData);
         form.reset();
-}
 };
 
 
