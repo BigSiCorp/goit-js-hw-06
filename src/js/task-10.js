@@ -8,7 +8,6 @@ createBtn.addEventListener("click", () => {
 });
 
 function createBoxes(amount) {
-  console.log(amount);
   let markup = "";
   let objectsCollection = [];
 
@@ -19,7 +18,6 @@ function createBoxes(amount) {
       height: 30 + 10 * (i + (containers < 1 ? 0 : containers)),
       color: getRandomHexColor(),
     };
-    console.log(objectsCollection);
     objectsCollection.push(obj);
   }
 
